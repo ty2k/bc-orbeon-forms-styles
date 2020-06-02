@@ -1,0 +1,188 @@
+/* Body */
+body.orbeon {
+  font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Focus style */
+:focus {
+  outline: 4px solid #3B99FC !important;
+}
+
+/* Checkbox labels */
+.orbeon label.checkbox {
+  color: #313132 !important;
+  cursor: pointer !important;
+  display: block !important;
+  font-size: 18px !important;
+  margin-bottom: 12px !important;
+  position: relative !important;
+  user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Checkbox inputs */
+.orbeon label.checkbox input[type="checkbox"] {
+  background-color: #fff !important;
+  border: 2px solid #606060 !important;
+  border-radius: 0 !important;
+  display: inline-block !important;
+  font-size: 0.9em !important;
+  height: 18px !important;
+  line-height: 0.9em !important;
+  margin-top: 0 !important;
+  position: relative !important;
+  text-align: center !important;
+  width: 18px !important;
+  appearance:none !important;
+  -moz-appearance:none !important;
+  -webkit-appearance: none !important;
+  user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Checkbox checkmarks (white on grey background) */
+.orbeon label.checkbox input[type="checkbox"]:checked {
+  background-color: #606060 !important;
+}
+.orbeon label.checkbox input[type="checkbox"]:after {
+  color: white !important;
+  content: '\2713' !important;
+}
+
+/* Checkbox label spans */
+.orbeon label.checkbox span {
+  margin-left: 25px !important;
+}
+
+/* Checkbox spans when checked */
+.orbeon label.checkbox input[type="checkbox"]:checked ~ span:after {
+  background-color: #606060 !important;
+}
+
+/* List items */
+.orbeon li {
+  font-size: 18px !important;
+  line-height: 24px !important;
+}
+
+/* Radio button labels */
+.orbeon .xforms-select1-appearance-full label.radio {
+  color: #313132 !important;
+  font-size: 18px !important;
+  position: relative !important;
+}
+
+/* Radio button (hide the browser default) */
+.orbeon label.radio input[type="radio"] {
+  opacity: 0;
+}
+
+/* Radio button label text in span */
+.orbeon label.radio > span {
+  display: inline !important;
+  margin-left: -13px !important;
+}
+
+/* Radio button (BC style) */
+.orbeon label.radio span:before {
+  background-color: transparent;
+  border: 2px solid #606060;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  margin: 0 5px 0 0;
+  position: relative;
+  top: 5px;
+  width: 20px;
+}
+.orbeon label.radio input[type="radio"]:focus + span:before {
+  outline: 4px solid #3B99FC !important;
+}
+
+/* Radio button dot (BC Style), hidden when not checked */
+.orbeon label.radio input[type="radio"] + span:after {
+  background: #606060;
+  border-radius: 50%;
+  content: '';
+  display: none;
+  height: 12px;
+  left: 6px;
+  position: absolute;
+  top: 11px;
+  width: 12px;
+}
+
+/* Radio button dot (BC Style), shown when checked */
+.orbeon label.radio input[type="radio"]:checked + span:after {
+  display: block;
+}
+
+/* Required asterisk */
+.orbeon .xforms-required .xforms-label::before {
+  color: #D8292F !important;
+}
+
+/* Select dropdown */
+.orbeon .xbl-fr-grid .fr-grid select {
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBkPSJNMjA3LjAyOSAzODEuNDc2TDEyLjY4NiAxODcuMTMyYy05LjM3My05LjM3My05LjM3My0yNC41NjkgMC0zMy45NDFsMjIuNjY3LTIyLjY2N2M5LjM1Ny05LjM1NyAyNC41MjItOS4zNzUgMzMuOTAxLS4wNEwyMjQgMjg0LjUwNWwxNTQuNzQ1LTE1NC4wMjFjOS4zNzktOS4zMzUgMjQuNTQ0LTkuMzE3IDMzLjkwMS4wNGwyMi42NjcgMjIuNjY3YzkuMzczIDkuMzczIDkuMzczIDI0LjU2OSAwIDMzLjk0MUwyNDAuOTcxIDM4MS40NzZjLTkuMzczIDkuMzcyLTI0LjU2OSA5LjM3Mi0zMy45NDIgMHoiLz48L3N2Zz4=');
+  background-color: white !important;
+  background-position: right 10px center !important;
+  background-repeat: no-repeat !important;
+  background-size: 1em !important;
+  border: 2px solid #606060 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #313132 !important;
+  font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif !important;
+  font-size: 18px !important;
+  height: 34px !important;
+  line-height: 20px !important;
+  min-width: 200px !important;
+  padding: 5px 45px 5px 15px !important;
+  appearance:none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance:none !important;
+}
+
+/* Hint text */
+.orbeon .fr-grid .xforms-hint {
+  color: #313132 !important;
+  font-size: 18px !important;
+  margin-top: 0 !important;
+}
+
+/* Text input */
+.orbeon .xbl-fr-grid .fr-grid input[type="text"] {
+  border: 2px solid #606060 !important;
+  border-radius: 4px !important;
+  color: #313132 !important;
+  font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif !important;
+  font-size: 18px !important;
+  height: 34px !important;
+  margin: 0 0 0 0 !important;
+  padding: 5px 5px 5px 7px !important;
+  transition: none !important;
+}
+.orbeon .xbl-fr-grid .fr-grid input[type="text"]:focus {
+  outline: 4px solid #3B99FC !important;
+}
+
+/* Question labels */
+.orbeon .fr-grid .xforms-label {
+  color: #313132 !important;
+  font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif !important;
+  font-size: 18px !important;
+  margin: 0 0 16px 0 !important;
+}
+
+/* Question group */
+.orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td > .xforms-control, .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td > .xbl-component, .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td > .xforms-group {
+  margin: 0 0 50px 0 !important;
+}
