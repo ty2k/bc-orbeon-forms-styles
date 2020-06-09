@@ -192,41 +192,62 @@ body.orbeon {
   margin: 0 0 50px 0 !important;
 }
 
-/* Wizard navigation link text (normally no-wrap) */
+/* Wizard left navigation panel */
+.orbeon .nav-list {
+  padding-left: 0 !important;
+}
+.orbeon .xbl-fr-wizard .fr-wizard-toc {
+  min-width: 250px;
+}
+
+/* Wizard left navigation link list items */
+.orbeon .xbl-fr-wizard .fr-wizard-toc .nav li {
+  background: none;
+}
+
+/* Wizard left navigation link text (normally no-wrap) */
 .orbeon .xbl-fr-wizard .fr-wizard-toc .nav a {
   white-space: normal;
 }
+.orbeon .nav-list > .active > span > a, .orbeon .nav-list > .active > span > a:hover {
+	background-color: #355992;
+}
 
-/* Wizard navigation pagination links */
+/* Wizard left navigation pagination links */
 .contentPageMainColumn .fr-wizard-navigation ul > li {
   background: none !important;
   display: inline-block;
   padding-left: 0px;
 }
 
-/* Wizard navigation pagination button group */
+/* Wizard left navigation pagination button group */
 .orbeon .pagination ul {
   box-shadow: none !important;
 }
 
-/* Wizard navigation pagination count span */
+/* Wizard left leftnavigation pagination count span */
 .orbeon .pagination ul > li > span.fr-page-number {
   border: 2px solid white;
 }
 
-/* Wizard navigation pagination link - right arrow button enabled (BC Primary Button) */
+/* Wizard left navigation pagination link - right arrow button enabled (BC Secondary Button) */
 .orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal {
-  background-color: #003366;
+  background-color: white;
   border: 2px solid #003366;
 }
 .orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover {
+  background-color: #003366;
+  color: white;
   opacity: 0.8;
 }
 .orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal a i.fa.fa-fw.fa-chevron-right::before {
+  color: #003366;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover a i.fa.fa-fw.fa-chevron-right::before {
   color: white;
 }
 
-/* Wizard navigation pagination link - right arrow button disabled (BC Disabled Primary Button) */
+/* Wizard left navigation pagination link - right arrow button disabled (BC Disabled Primary Button) */
 .orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly {
   cursor: not-allowed;
   opacity: 0.3;
@@ -235,14 +256,14 @@ body.orbeon {
   cursor: not-allowed;
 }
 .orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a i.fa.fa-fw.fa-chevron-right::before {
-  color: white;
+  color: #003366;
   cursor: not-allowed;
 }
 .orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a i.fa.fa-fw.fa-chevron-right {
   opacity: 1;
 }
 
-/* Wizard navigation pagination link - left arrow button enabled (BC Secondary Button) */
+/* Wizard left navigation pagination link - left arrow button enabled (BC Secondary Button) */
 .orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal {
   background-color: white;
   border: 2px solid #003366;
@@ -259,7 +280,7 @@ body.orbeon {
   color: white;
 }
 
-/* Wizard navigation pagination link - left arrow button disabled (BC Disabled Secondary Button) */
+/* Wizard left navigation pagination link - left arrow button disabled (BC Disabled Secondary Button) */
 .orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly {
   background-color: white;
   cursor: not-allowed;
@@ -273,7 +294,18 @@ body.orbeon {
   cursor: not-allowed;
 }
 
-/* Bottom navigation - all buttons */
+/* Wizard bottom navigation - all buttons */
+.orbeon .fr-buttons .xforms-trigger button {
+  min-width: 9.5em;
+  width: auto;
+}
+@media (max-width: 640px) {
+  .orbeon .fr-buttons .xforms-trigger button {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}
 span.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-image: none !important;
   border: 2px solid;
@@ -292,7 +324,7 @@ span.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonl
   text-decoration: none;
 }
 
-/* Bottom navigation - next button enabled (BC Primary Button) */
+/* Wizard bottom navigation - next button enabled (BC Primary Button) */
 span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: #003366;
   border-color: #003366;
@@ -305,7 +337,7 @@ span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearan
   color: white;
 }
 
-/* Bottom navigation - next button disabled (BC Disabled Primary Button) */
+/* Wizard bottom navigation - next button disabled (BC Disabled Primary Button) */
 span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
   background-color: #003366;
   border-color: #003366;
@@ -318,7 +350,7 @@ span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearan
   opacity: 1;
 }
 
-/* Bottom navigation - prev button enabled (BC Secondary Button) */
+/* Wizard bottom navigation - prev button enabled (BC Secondary Button) */
 span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: white;
   border-color: #003366;
@@ -337,7 +369,7 @@ span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearan
   color: white;
 }
 
-/* Bottom navigation - prev button disabled (BC Disabled Secondary Button) */
+/* Wizard bottom navigation - prev button disabled (BC Disabled Secondary Button) */
 span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
   background-color: white;
   border-color: #003366;
@@ -349,7 +381,7 @@ span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearan
   color: #003366;
 }
 
-/* Bottom navigation - clear button enabled (BC Secondary Button) */
+/* Wizard bottom navigation - clear button enabled (BC Secondary Button) */
 span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: white;
   border-color: #003366;
@@ -368,15 +400,63 @@ span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-ful
   color: white;
 }
 
-/* Bottom navigation - PDF button enabled (BC Primary Button) */
+/* Wizard bottom navigation - PDF button enabled (BC Secondary Button) */
 span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: white;
+  border-color: #003366;
+  color: #003366;
+}
+span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
+  background-color: #003366;
+  color: white;
+  opacity: 0.8
+}
+span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: #003366;
+}
+span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
+  color: white;
+}
+
+/* Full page bottom navigation - Refresh button (BC Secondary Button) */
+span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: white;
+  border-color: #003366;
+  color: #003366;
+}
+@media (max-width: 640px) {
+  span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+    width: 100%;
+  }
+}
+span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
+  background-color: #003366;
+  color: white;
+  opacity: 0.8;
+}
+span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: #003366;
+  left: -10px;
+  position: relative;
+}
+@media (max-width: 640px) {
+  span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+    left: 0px;
+  }
+}
+span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
+  color: white;
+}
+
+/* Full page bottom navigation - Submit/Email button (BC Primary Button) */
+span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: #003366;
   border-color: #003366;
   color: white;
 }
-span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
+span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
   opacity: 0.8;
 }
-span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
   color: white;
 }
