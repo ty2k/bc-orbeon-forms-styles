@@ -1,7 +1,7 @@
 /* Body */
 body.orbeon {
-  font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif;
-  font-size: 18px;
+  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif; */
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -10,12 +10,21 @@ body.orbeon {
   outline: 4px solid #3B99FC !important;
 }
 
+/* Links */
+.orbeon a {
+  color: #1a5a96;
+}
+.orbeon a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
 /* Checkbox labels */
 .orbeon label.checkbox {
   color: #313132 !important;
   cursor: pointer !important;
   display: block !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   margin-bottom: 12px !important;
   position: relative !important;
   user-select: none !important;
@@ -67,14 +76,15 @@ body.orbeon {
 
 /* List items */
 .orbeon li {
-  font-size: 18px !important;
-  line-height: 24px !important;
+  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important; */
+  font-size: 16px;
+  /* line-height: 24px; */
 }
 
 /* Radio button labels */
 .orbeon .xforms-select1-appearance-full label.radio {
   color: #313132 !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   position: relative !important;
 }
 
@@ -84,9 +94,9 @@ body.orbeon {
 }
 
 /* Radio button label text in span */
-.orbeon label.radio > span {
-  display: inline !important;
-  margin-left: -13px !important;
+.orbeon .xforms-select1-appearance-full label.radio > span {
+  /* line-height: 24px; */
+  margin: 0 0 5px 30px;
 }
 
 /* Radio button (BC style) */
@@ -95,11 +105,12 @@ body.orbeon {
   border: 2px solid #606060;
   border-radius: 50%;
   content: '';
-  display: inline-block;
+  /* display: inline-block; */
   height: 20px;
-  margin: 0 5px 0 0;
-  position: relative;
-  top: 5px;
+  left: 0px;
+  /* margin: 0 5px 0 0; */
+  position: absolute;
+  top: 0px;
   width: 20px;
 }
 .orbeon label.radio input[type="radio"]:focus + span:before {
@@ -107,21 +118,15 @@ body.orbeon {
 }
 
 /* Radio button dot (BC Style), hidden when not checked */
-.orbeon label.radio input[type="radio"] + span:after {
+.orbeon label.radio input[type="radio"]:checked + span:after {
   background: #606060;
   border-radius: 50%;
   content: '';
-  display: none;
-  height: 12px;
-  left: 6px;
+  height: 10px;
+  left: 5px;
   position: absolute;
-  top: 11px;
-  width: 12px;
-}
-
-/* Radio button dot (BC Style), shown when checked */
-.orbeon label.radio input[type="radio"]:checked + span:after {
-  display: block;
+  top: 5px;
+  width: 10px;
 }
 
 /* Required asterisk */
@@ -140,8 +145,8 @@ body.orbeon {
   border-radius: 0 !important;
   box-shadow: none !important;
   color: #313132 !important;
-  font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif !important;
-  font-size: 18px !important;
+  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important; */
+  font-size: 16px !important;
   height: 34px !important;
   line-height: 20px !important;
   min-width: 200px !important;
@@ -154,7 +159,7 @@ body.orbeon {
 /* Hint text */
 .orbeon .fr-grid .xforms-hint {
   color: #313132 !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   margin-top: 0 !important;
 }
 
@@ -163,8 +168,8 @@ body.orbeon {
   border: 2px solid #606060 !important;
   border-radius: 4px !important;
   color: #313132 !important;
-  font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif !important;
-  font-size: 18px !important;
+  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important; */
+  font-size: 16px !important;
   height: 34px !important;
   margin: 0 0 0 0 !important;
   padding: 5px 5px 5px 7px !important;
@@ -177,12 +182,201 @@ body.orbeon {
 /* Question labels */
 .orbeon .fr-grid .xforms-label {
   color: #313132 !important;
-  font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif !important;
-  font-size: 18px !important;
+  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important; */
+  font-size: 16px !important;
   margin: 0 0 16px 0 !important;
 }
 
 /* Question group */
 .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td > .xforms-control, .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td > .xbl-component, .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td > .xforms-group {
   margin: 0 0 50px 0 !important;
+}
+
+/* Wizard navigation link text (normally no-wrap) */
+.orbeon .xbl-fr-wizard .fr-wizard-toc .nav a {
+  white-space: normal;
+}
+
+/* Wizard navigation pagination links */
+.contentPageMainColumn .fr-wizard-navigation ul > li {
+  background: none !important;
+  display: inline-block;
+  padding-left: 0px;
+}
+
+/* Wizard navigation pagination button group */
+.orbeon .pagination ul {
+  box-shadow: none !important;
+}
+
+/* Wizard navigation pagination count span */
+.orbeon .pagination ul > li > span.fr-page-number {
+  border: 2px solid white;
+}
+
+/* Wizard navigation pagination link - right arrow button enabled (BC Primary Button) */
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal {
+  background-color: #003366;
+  border: 2px solid #003366;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover {
+  opacity: 0.8;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal a i.fa.fa-fw.fa-chevron-right::before {
+  color: white;
+}
+
+/* Wizard navigation pagination link - right arrow button disabled (BC Disabled Primary Button) */
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a {
+  cursor: not-allowed;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a i.fa.fa-fw.fa-chevron-right::before {
+  color: white;
+  cursor: not-allowed;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a i.fa.fa-fw.fa-chevron-right {
+  opacity: 1;
+}
+
+/* Wizard navigation pagination link - left arrow button enabled (BC Secondary Button) */
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal {
+  background-color: white;
+  border: 2px solid #003366;
+}
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover {
+  background-color: #003366;
+  color: white;
+  opacity: 0.8;
+}
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal a i.fa.fa-fw.fa-chevron-left::before {
+  color: #003366;
+}
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover a i.fa.fa-fw.fa-chevron-left::before {
+  color: white;
+}
+
+/* Wizard navigation pagination link - left arrow button disabled (BC Disabled Secondary Button) */
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly {
+  background-color: white;
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a {
+  cursor: not-allowed;
+}
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a i.fa.fa-fw.fa-chevron-left::before {
+  color: #003366;
+  cursor: not-allowed;
+}
+
+/* Bottom navigation - all buttons */
+span.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-image: none !important;
+  border: 2px solid;
+  box-shadow: none !important;
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700;
+  padding: 10px 30px !important;
+  text-shadow: none !important;
+}
+span.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
+  text-decoration: underline;
+}
+span.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button:hover {
+  cursor: not-allowed !important;
+  text-decoration: none;
+}
+
+/* Bottom navigation - next button enabled (BC Primary Button) */
+span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: #003366;
+  border-color: #003366;
+  color: white;
+}
+span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
+  opacity: 0.8;
+}
+span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: white;
+}
+
+/* Bottom navigation - next button disabled (BC Disabled Primary Button) */
+span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
+  background-color: #003366;
+  border-color: #003366;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button i {
+  color: white;
+  opacity: 1;
+}
+
+/* Bottom navigation - prev button enabled (BC Secondary Button) */
+span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: white;
+  border-color: #003366;
+  color: #003366;
+}
+span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
+  background-color: #003366;
+  border-color: #003366;
+  color: white;
+  opacity: 0.8;
+}
+span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: #003366;
+}
+span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover i {
+  color: white;
+}
+
+/* Bottom navigation - prev button disabled (BC Disabled Secondary Button) */
+span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
+  background-color: white;
+  border-color: #003366;
+  color: #003366;
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button i {
+  color: #003366;
+}
+
+/* Bottom navigation - clear button enabled (BC Secondary Button) */
+span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: white;
+  border-color: #003366;
+  color: #003366;
+}
+span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
+  background-color: #003366;
+  border-color: #003366;
+  color: white;
+  opacity: 0.8
+}
+span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: #003366;
+}
+span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
+  color: white;
+}
+
+/* Bottom navigation - PDF button enabled (BC Primary Button) */
+span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: #003366;
+  border-color: #003366;
+  color: white;
+}
+span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
+  opacity: 0.8;
+}
+span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: white;
 }
