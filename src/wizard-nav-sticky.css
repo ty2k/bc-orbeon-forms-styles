@@ -1,0 +1,5 @@
+/* Wizard navigation position when scrolling */
+/* Chrome and Firefox work with sticky, but IE and Safari break */
+.orbeon .xbl-fr-wizard .fr-wizard-toc-inner {
+  position: static;
+}

@@ -1,0 +1,59 @@
+/* ESB Variance form-specific styles */
+
+/* Since the Overview section has no title, remove the padding the H2 tag creates */
+#o0overview-section≡xf-580 h2 {
+  display: none;
+}
+#o0overview-section≡xf-572 h2.fr-section-title {
+  display: none;
+}
+
+/* Hide all required asterisks */
+.orbeon .xforms-required .xforms-label::before {
+  display: none;
+}
+.orbeon .xbl-fr-checkbox-input.xforms-required .checkbox span::before {
+  display: none;
+}
+
+/* Style "Save PDF" button as primary */
+span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: #003366;
+  border-color: #003366;
+  color: white;
+}
+span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
+  opacity: 0.8;
+}
+span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: white;
+}
+
+/* Form output styles - for print PDF */
+@media print {
+  @page :left {
+    margin-left: 3cm;
+  }
+
+  @page :right {
+    margin-left: 3cm;
+  }
+
+  .body-text-regular {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+  .xforms-output-output {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* Custom class to try forcing result font size to behave */
+.body-text-regular {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+.xforms-output-output {
+  font-size: 16px !important;
+}

@@ -1,13 +1,18 @@
-/* Body */
-body.orbeon {
-  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif; */
-  font-size: 16px;
-  line-height: 24px;
+/* Orbeon root class */
+.orbeon {
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
 }
 
 /* Focus style */
 :focus {
   outline: 4px solid #3B99FC !important;
+}
+
+/* Border around form */
+.fr-border {
+  border: none !important;
 }
 
 /* Links */
@@ -17,6 +22,50 @@ body.orbeon {
 .orbeon a:hover {
   color: blue;
   text-decoration: none;
+}
+
+/* Primary buttons in text (non-form buttons that have made their way into content) */
+.orbeon .btn-primary {
+  background-color: #003366;
+  border-color: #003366;
+  color: white;
+}
+
+.orbeon .btn-primary:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Section titles */
+.orbeon .xbl-fr-section h2.fr-section-title, .orbeon .xbl-fr-section h3.fr-section-title, .orbeon .xbl-fr-section h4.fr-section-title, .orbeon .xbl-fr-section h5.fr-section-title, .orbeon .xbl-fr-section h6.fr-section-title {
+  background-color: white !important;
+  background-image: none !important;
+  color: #313132 !important;
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+.orbeon .xbl-fr-section h2.fr-section-title {
+  font-size: 30px !important;
+}
+.orbeon .xbl-fr-section h3.fr-section-title {
+  font-size: 26px !important;
+}
+.orbeon .xbl-fr-section h4.fr-section-title {
+  font-size: 21px !important;
+}
+.orbeon .xbl-fr-section .fr-section-title .fr-section-label {
+  color: #313132 !important;
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
+  font-size: 30px !important;
+}
+.orbeon .xbl-fr-section .fr-section-title .fr-section-label a {
+  color: #313132 !important;
+}
+
+.p1, .p2, .s1 {
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
+  font-size: 16px;
+  line-height: 1.6
 }
 
 /* Checkbox labels */
@@ -76,14 +125,14 @@ body.orbeon {
 
 /* List items */
 .orbeon li {
-  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important; */
   font-size: 16px;
-  /* line-height: 24px; */
+  line-height: 1.6;
 }
 
 /* Radio button labels */
 .orbeon .xforms-select1-appearance-full label.radio {
   color: #313132 !important;
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
   font-size: 16px !important;
   position: relative !important;
 }
@@ -95,7 +144,7 @@ body.orbeon {
 
 /* Radio button label text in span */
 .orbeon .xforms-select1-appearance-full label.radio > span {
-  /* line-height: 24px; */
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
   margin: 0 0 5px 30px;
 }
 
@@ -129,8 +178,11 @@ body.orbeon {
   width: 10px;
 }
 
-/* Required asterisk */
+/* Required asterisk red */
 .orbeon .xforms-required .xforms-label::before {
+  color: #D8292F !important;
+}
+.orbeon .xbl-fr-checkbox-input.xforms-required .checkbox span::before {
   color: #D8292F !important;
 }
 
@@ -165,12 +217,12 @@ body.orbeon {
 
 /* Text input */
 .orbeon .xbl-fr-grid .fr-grid input[type="text"] {
-  border: 2px solid #606060 !important;
+  border: 1px solid #606060 !important;
   border-radius: 4px !important;
   color: #313132 !important;
   /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important; */
   font-size: 16px !important;
-  height: 34px !important;
+  height: 44px !important;
   margin: 0 0 0 0 !important;
   padding: 5px 5px 5px 7px !important;
   transition: none !important;
@@ -179,17 +231,53 @@ body.orbeon {
   outline: 4px solid #3B99FC !important;
 }
 
+/* Textarea input */
+.orbeon .xbl-fr-grid .fr-grid textarea {
+  border: 1px solid #606060 !important;
+  border-radius: 4px !important;
+}
+
+/* Add-on buttons next to input fields */
+.orbeon .xforms-form .xbl-component .input-prepend > .add-on,
+.orbeon .xforms-form .xbl-component .input-append > .add-on {
+  min-height: 44px;
+  min-width: 44px;
+}
+.orbeon .xforms-form .xbl-component .input-prepend > .add-on i,
+.orbeon .xforms-form .xbl-component .input-append > .add-on i {
+  margin-top: 10px;
+}
+/* Add-on prepend, ie. "$" label before input field */
+.orbeon .input-prepend .add-on {
+  background-color: white;
+  border-color: #606060;
+  border-right: 0px !important;
+}
+/* .orbeon .xforms-form .xbl-component .input-append > :not(.add-on) {
+  border-right: 0px !important;
+  border-top-right-radius: 0px 0px !important;
+  border-bottom-right-radius: 0px 0px !important;
+} */
+.orbeon .xforms-form .xbl-component .input-prepend > :not(.add-on) {
+  border-left: 0px !important;
+  border-top-left-radius: 0px 0px !important;
+  border-bottom-left-radius: 0px 0px !important;
+}
+.orbeon .xforms-form .xbl-component .input-prepend > .add-on .xforms-output-output,
+.orbeon .xforms-form .xbl-component .input-append > .add-on .xforms-output-output {
+  line-height: 2;
+}
 /* Question labels */
 .orbeon .fr-grid .xforms-label {
   color: #313132 !important;
-  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important; */
   font-size: 16px !important;
-  margin: 0 0 16px 0 !important;
+  font-weight: 700;
+  margin: 0 0 7px 0 !important;
 }
 
 /* Question group */
 .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td > .xforms-control, .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td > .xbl-component, .orbeon .xbl-fr-grid .fr-grid:not(.fr-grid-css) .fr-grid-body .fr-grid-td > .xforms-group {
-  margin: 0 0 50px 0 !important;
+  margin: 0 0 30px 0 !important;
 }
 
 /* Wizard left navigation panel */
@@ -294,7 +382,7 @@ body.orbeon {
   cursor: not-allowed;
 }
 
-/* Wizard bottom navigation - all buttons */
+/* Bottom navigation - all buttons */
 .orbeon .fr-buttons .xforms-trigger button {
   min-width: 9.5em;
   width: auto;
@@ -324,7 +412,7 @@ span.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonl
   text-decoration: none;
 }
 
-/* Wizard bottom navigation - next button enabled (BC Primary Button) */
+/* Bottom navigation - Next button enabled (BC Primary Button) */
 span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: #003366;
   border-color: #003366;
@@ -337,7 +425,7 @@ span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearan
   color: white;
 }
 
-/* Wizard bottom navigation - next button disabled (BC Disabled Primary Button) */
+/* Bottom navigation - Next button disabled (BC Disabled Primary Button) */
 span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
   background-color: #003366;
   border-color: #003366;
@@ -350,7 +438,7 @@ span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearan
   opacity: 1;
 }
 
-/* Wizard bottom navigation - prev button enabled (BC Secondary Button) */
+/* Bottom navigation - Previous button enabled (BC Secondary Button) */
 span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: white;
   border-color: #003366;
@@ -369,7 +457,7 @@ span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearan
   color: white;
 }
 
-/* Wizard bottom navigation - prev button disabled (BC Disabled Secondary Button) */
+/* Bottom navigation - Previous button disabled (BC Disabled Secondary Button) */
 span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
   background-color: white;
   border-color: #003366;
@@ -381,7 +469,7 @@ span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearan
   color: #003366;
 }
 
-/* Wizard bottom navigation - clear button enabled (BC Secondary Button) */
+/* Bottom navigation - Clear button (BC Secondary Button) */
 span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: white;
   border-color: #003366;
@@ -400,7 +488,7 @@ span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-ful
   color: white;
 }
 
-/* Wizard bottom navigation - PDF button enabled (BC Secondary Button) */
+/* Bottom navigation - Save PDF button (BC Secondary Button) */
 span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: white;
   border-color: #003366;
@@ -418,7 +506,7 @@ span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:
   color: white;
 }
 
-/* Full page bottom navigation - Refresh button (BC Secondary Button) */
+/* Bottom navigation - Refresh button (BC Secondary Button) */
 span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: white;
   border-color: #003366;
@@ -448,7 +536,7 @@ span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-f
   color: white;
 }
 
-/* Full page bottom navigation - Submit/Email button (BC Primary Button) */
+/* Bottom navigation - Submit/Email button (BC Primary Button) */
 span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-color: #003366;
   border-color: #003366;
