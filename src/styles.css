@@ -203,7 +203,7 @@
   border-radius: 0 !important;
   box-shadow: none !important;
   color: #313132 !important;
-  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important; */
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
   font-size: 16px !important;
   height: 34px !important;
   line-height: 20px !important;
@@ -226,7 +226,7 @@
   border: 1px solid #606060 !important;
   border-radius: 4px !important;
   color: #313132 !important;
-  /* font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important; */
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
   font-size: 16px !important;
   height: 44px !important;
   margin: 0 0 0 0 !important;
