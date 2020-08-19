@@ -214,6 +214,12 @@
   -moz-appearance:none !important;
 }
 
+/* Dropdown menu (left control in grid) */
+.orbeon .dropdown.fr-grid-dropdown-menu.open ul.dropdown-menu li {
+  background: none;
+  padding-left: 0px;
+}
+
 /* Hint text */
 .orbeon .fr-grid .xforms-hint {
   color: #313132 !important;
