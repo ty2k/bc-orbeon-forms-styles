@@ -243,6 +243,41 @@
   outline: 4px solid #3B99FC !important;
 }
 
+/* Text input with character count for secrets/passwords */
+.orbeon .xforms-secret input {
+  border: 1px solid #606060 !important;
+  font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
+  font-size: 16px !important;
+  height: 44px !important;
+}
+.orbeon .xbl-fr-character-counter > .fr-charcounter-wrapper > .xforms-control.xforms-secret.xforms-incremental input {
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-right: none !important;
+}
+.orbeon .xbl-fr-character-counter > .fr-charcounter-wrapper > .fr-charcounter-count {
+  border: 1px solid #606060 !important;
+  border-left: none !important;
+  border-radius: 0px 4px 4px 0px !important;
+  height: 44px !important;
+  line-height: 2.4 !important;
+  margin: 0px !important;
+  margin-left: 0px !important;
+}
+.orbeon .xbl-fr-character-counter > .fr-charcounter-wrapper > .fr-charcounter-count .label.fr-charcounter-current.xforms-control.xforms-output {
+  background: none !important;
+  color: #767676 !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  padding: 0px 8px !important;
+  text-shadow: none !important;
+}
+
+/* Text output */
+.orbeon .xforms-output.xforms-output-appearance-minimal output[role="textbox"] {
+  font-size: 16px !important;
+}
+
 /* Textarea input */
 .orbeon .xbl-fr-grid .fr-grid textarea {
   border: 1px solid #606060 !important;
