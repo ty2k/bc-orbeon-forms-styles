@@ -341,6 +341,61 @@
 .orbeon .xforms-form .xbl-component .input-append > .add-on .xforms-output-output {
   line-height: 2;
 }
+
+/* Popover div (hint text) */
+.orbeon .popover {
+  background-color: #E6E6E6 !important;
+  box-shadow: 0px 2px 2px #00000029 !important;
+}
+.orbeon .popover.xforms-help-popover {
+  border: 0px !important;
+}
+/* Popover div "X" close button */
+.orbeon .popover.xforms-help-popover .close {
+  color: #313132 !important;
+  opacity: 1.0 !important;
+  text-shadow: none !important;
+}
+.orbeon .popover.xforms-help-popover .close:hover {
+  opacity: 0.9 !important;
+}
+.orbeon .popover.xforms-help-popover .popover-content {
+  font-size: 16px !important;
+}
+.orbeon .popover-title {
+  background-color: #E6E6E6 !important;
+  border-bottom: none !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+/* Popover div arrow */
+.orbeon .popover.bottom .arrow {
+  border-bottom-color: #E6E6E6 !important;
+}
+.orbeon .popover.bottom .arrow::after {
+  border-bottom-color: #E6E6E6 !important;
+}
+.orbeon .popover.left .arrow {
+  border-left-color: #E6E6E6 !important;
+}
+.orbeon .popover.left .arrow::after {
+  border-left-color: #E6E6E6 !important;
+}
+.orbeon .popover.right .arrow {
+  border-right-color: #E6E6E6 !important;
+}
+.orbeon .popover.right .arrow::after {
+  border-right-color: #E6E6E6 !important;
+}
+.orbeon .popover.top .arrow {
+  border-top-color: #E6E6E6 !important;
+}
+.orbeon .popover.top .arrow::after {
+  border-top-color: #E6E6E6 !important;
+}
+
 /* Question labels */
 .orbeon .fr-grid .xforms-label {
   color: #313132 !important;
