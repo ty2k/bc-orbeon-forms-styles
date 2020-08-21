@@ -240,7 +240,9 @@
   transition: none !important;
 }
 .orbeon .xbl-fr-grid .fr-grid input[type="text"]:focus {
-  outline: 4px solid #3B99FC !important;
+  border: 1px solid #3B99FC !important;
+  box-shadow: 0 0 0 2px #3B99FC;
+  outline: none !important;
 }
 
 /* Text input with character count for secrets/passwords */
@@ -250,10 +252,21 @@
   font-size: 16px !important;
   height: 44px !important;
 }
+.orbeon .xforms-secret input:focus {
+  border: 1px solid #3B99FC !important;
+  box-shadow: 0 0 0 2px #3B99FC;
+  outline: none !important;
+}
 .orbeon .xbl-fr-character-counter > .fr-charcounter-wrapper > .xforms-control.xforms-secret.xforms-incremental input {
   border-bottom-right-radius: 0px !important;
   border-top-right-radius: 0px !important;
   border-right: none !important;
+}
+.orbeon .xbl-fr-character-counter > .fr-charcounter-wrapper > .xforms-control.xforms-secret.xforms-incremental input:focus {
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-right: 1px solid #3B99FC !important;
+  outline: none !important;
 }
 .orbeon .xbl-fr-character-counter > .fr-charcounter-wrapper > .fr-charcounter-count {
   border: 1px solid #606060 !important;
@@ -278,10 +291,24 @@
   font-size: 16px !important;
 }
 
-/* Textarea input */
+/* Textarea input - plain text */
 .orbeon .xbl-fr-grid .fr-grid textarea {
   border: 1px solid #606060 !important;
   border-radius: 4px !important;
+  font-size: 16px !important;
+}
+.orbeon .xbl-fr-grid .fr-grid textarea:focus {
+  border: 1px solid #3B99FC !important;
+  box-shadow: 0 0 0 2px #3B99FC;
+  outline: none !important;
+}
+
+/* Textarea input - formatted text in TinyMCE WYSIWYG editor */
+.orbeon .mce-tinymce {
+  border: 1px solid #606060 !important;
+}
+.orbeon .mce-btn-group:not(:first-child) {
+  border-left: 1px solid #606060 !important;
 }
 
 /* Add-on buttons next to input fields */
