@@ -280,8 +280,9 @@
 .orbeon .xbl-fr-character-counter > .fr-charcounter-wrapper > .fr-charcounter-count .label.fr-charcounter-current.xforms-control.xforms-output {
   background: none !important;
   color: #767676 !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   font-weight: normal !important;
+  line-height: 2.6 !important;
   padding: 0px 8px !important;
   text-shadow: none !important;
 }
@@ -315,7 +316,7 @@
 .orbeon .xforms-form .xbl-component .input-prepend > .add-on,
 .orbeon .xforms-form .xbl-component .input-append > .add-on {
   min-height: 44px;
-  min-width: 44px;
+  /* min-width: 44px; */
 }
 .orbeon .xforms-form .xbl-component .input-prepend > .add-on i,
 .orbeon .xforms-form .xbl-component .input-append > .add-on i {
@@ -339,7 +340,48 @@
 }
 .orbeon .xforms-form .xbl-component .input-prepend > .add-on .xforms-output-output,
 .orbeon .xforms-form .xbl-component .input-append > .add-on .xforms-output-output {
-  line-height: 2;
+  font-size: 16px !important;
+  line-height: 2 !important;
+  text-shadow: none !important;
+}
+.orbeon .xforms-form .xbl-component .input-append .xforms-input-input {
+  border-bottom: 1px solid #606060 !important;
+  border-left: 1px solid #606060 !important;
+  border-right: 0px !important;
+  border-top: 1px solid #606060 !important;
+  border-radius: 4px 0px 0px 4px !important;
+}
+.orbeon .xforms-form .xbl-component .input-append .add-on:last-child {
+  background-color: white !important;
+  border-bottom: 1px solid #606060 !important;
+  border-left: 0px !important;
+  border-right: 1px solid #606060 !important;
+  border-top: 1px solid #606060 !important;
+}
+
+/* Input field with both suffix and prefix add-ons, needs square border */
+.orbeon .xforms-form .xbl-component .input-prepend.input-append .xforms-input-input {
+  border-bottom: 1px solid #606060 !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-top: 1px solid #606060 !important;
+  border-radius: 0px !important;
+}
+
+/* .orbeon .xforms-form .xbl-component .input-prepend.input-append .add-on:last-child {
+  border-right: 1px solid #606060 !important;
+} */
+
+/* .orbeon .input-prepend.input-append .add-on:first-child, .orbeon .input-prepend.input-append .btn:first-child */
+
+/* Help icon (FontAwesome circled "i", changed to circled "?") */
+.orbeon .xbl-fr-grid .fr-grid .xforms-help:not(:empty)::before {
+  content: "\f059";
+}
+.orbeon .xbl-fr-grid .fr-grid .xforms-help:not(:empty) {
+  font-size: 16px !important;
+  max-height: 16px !important;
+  max-width: 16px !important;
 }
 
 /* Popover div (hint text) */
