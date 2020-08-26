@@ -438,6 +438,59 @@
   border-top-color: #E6E6E6 !important;
 }
 
+/* Error/alert message */
+.orbeon .xforms-alert.xforms-active {
+  background: none !important;
+  border: none !important;
+  color: #D8292F !important;
+  font-weight: 700 !important;
+  margin-top: 0px !important;
+  padding: 2px 0px !important;
+}
+.orbeon .xforms-alert.xforms-active::before {
+  border: 0px !important;
+  content: "\f071" !important;
+  display: inline-block !important;
+  font: normal normal normal 14px/1 FontAwesome !important;
+  left: 0px !important;
+  padding-right: 4px !important;
+  position: relative !important;
+  top: 0px !important;
+  width: auto !important;
+}
+
+/* Error summary section title */
+/* .orbeon .xforms-group.fr-error-summary-body.fr-level-error .xforms-label.fr-error-title */
+.orbeon .xbl-fr-error-summary .fr-level-error > .fr-error-title {
+  background: none !important;
+  border-bottom: 0px !important;
+  color: #D8292F !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+.orbeon .xbl-fr-error-summary .fr-level-error > .fr-error-title::before {
+  content: "\f071" !important;
+  font: normal normal normal 14px/1 FontAwesome !important;
+  padding-right: 4px !important;
+}
+
+/* Error list item */
+.orbeon .xbl-fr-error-summary .fr-error-group > li {
+  border: 0px !important;
+  color: #D8292F !important;
+  padding: 5px 10px !important;
+}
+.orbeon .xbl-fr-error-summary .fr-error-group .fr-level-error .fr-error-label,
+.orbeon .xbl-fr-error-summary .fr-error-group .fr-level-error .fr-error-alert {
+  color: #D8292F !important;
+}
+
+/* Text input field with error */
+.orbeon .xbl-fr-grid .fr-grid .xforms-group.xforms-invalid input[type="text"] {
+  /* border-color: #D8292F !important; */
+  box-shadow: 0 0 0 2px #D8292F;
+}
+
 /* Question labels */
 .orbeon .fr-grid .xforms-label {
   color: #313132 !important;
