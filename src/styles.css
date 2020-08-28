@@ -2,7 +2,7 @@
 .orbeon {
   font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
   font-size: 16px !important;
-  line-height: 1.6 !important;
+  line-height: 1.25 !important;
 }
 
 /* Focus style */
@@ -62,10 +62,30 @@
   color: #313132 !important;
 }
 
+/* Body text */
 .p1, .p2, .s1 {
   font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
   font-size: 16px;
-  line-height: 1.6
+  line-height: 1.25;
+}
+.orbeon .xbl-fr-wizard .fr-wizard-body ul {
+  margin-left: 10px;
+}
+.orbeon .xbl-fr-wizard .fr-wizard-body li {
+  margin-bottom: 10px;
+  line-height: 1.25;
+  padding-left: 15px;
+}
+.orbeon .xbl-fr-wizard .fr-wizard-body li:first-child {
+  margin-top: 10px;
+}
+
+/* Labels */
+.orbeon label {
+  line-height: 2 !important;
+}
+.orbeon .xforms-label {
+  line-height: 2 !important;
 }
 
 /* Checkbox labels */
@@ -199,19 +219,24 @@
   background-position: right 10px center !important;
   background-repeat: no-repeat !important;
   background-size: 1em !important;
-  border: 2px solid #606060 !important;
-  border-radius: 0 !important;
+  border: 1px solid #606060 !important;
+  border-radius: 4px !important;
   box-shadow: none !important;
   color: #313132 !important;
   font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
   font-size: 16px !important;
-  height: 34px !important;
+  height: 44px !important;
   line-height: 20px !important;
   min-width: 200px !important;
-  padding: 5px 45px 5px 15px !important;
+  padding: 5px 45px 5px 8px !important;
   appearance:none !important;
   -webkit-appearance: none !important;
   -moz-appearance:none !important;
+}
+.orbeon .xbl-fr-grid .fr-grid select:focus {
+  border: 1px solid #3B99FC !important;
+  box-shadow: 0 0 0 2px #3B99FC !important;
+  outline: none !important;
 }
 
 /* Dropdown menu (left control in grid) */
@@ -222,7 +247,7 @@
 
 /* Hint text */
 .orbeon .fr-grid .xforms-hint {
-  color: #313132 !important;
+  color: #767676 !important;
   font-size: 16px !important;
   margin-top: 0 !important;
 }
@@ -241,8 +266,32 @@
 }
 .orbeon .xbl-fr-grid .fr-grid input[type="text"]:focus {
   border: 1px solid #3B99FC !important;
-  box-shadow: 0 0 0 2px #3B99FC;
+  box-shadow: 0 0 0 2px #3B99FC !important;
   outline: none !important;
+}
+.orbeon .xforms-form .xbl-component .input-append .xforms-input-input:focus {
+  border-bottom: 1px solid #3B99FC !important;
+  border-left: 1px solid #3B99FC !important;
+  border-right: 0px !important;
+  border-top: 1px solid #3B99FC !important;
+  box-shadow: 0 0 0 2px #3B99FC !important;
+  outline: none !important;
+}
+.orbeon .xforms-form .xbl-component .input-prepend .xforms-input-input:focus {
+  border-bottom: 1px solid #3B99FC !important;
+  border-left: 0px !important;
+  border-right: 1px solid #3B99FC !important;
+  border-top: 1px solid #3B99FC !important;
+  box-shadow: 0 0 0 2px #3B99FC !important;
+  outline: none !important;
+}
+.orbeon .xforms-form .xbl-component .input-prepend.input-append .xforms-input-input:focus {
+  border-bottom: 1px solid #3B99FC !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-top: 1px solid #3B99FC !important;
+  border-radius: 0px !important;
+  box-shadow: 0 0 0 2px #3B99FC !important;
 }
 
 /* Text input with character count for secrets/passwords */
@@ -315,8 +364,9 @@
 /* Add-on buttons next to input fields */
 .orbeon .xforms-form .xbl-component .input-prepend > .add-on,
 .orbeon .xforms-form .xbl-component .input-append > .add-on {
+  flex-shrink: 0;
   min-height: 44px;
-  /* min-width: 44px; */
+  min-width: 44px;
 }
 .orbeon .xforms-form .xbl-component .input-prepend > .add-on i,
 .orbeon .xforms-form .xbl-component .input-append > .add-on i {
@@ -328,10 +378,12 @@
   border-color: #606060;
   border-right: 0px !important;
 }
-/* .orbeon .xforms-form .xbl-component .input-append > :not(.add-on) {
-  border-right: 0px !important;
-  border-top-right-radius: 0px 0px !important;
-  border-bottom-right-radius: 0px 0px !important;
+/* Add-on prepend with error in field - box shadow on top, left, bottom */
+/* TODO: Try to duplicate the full border for focus and error styles */
+/* .orbeon .input-prepend .add-on.xforms-group.xforms-invalid {
+  border-color: #D8292F !important;
+  box-shadow: -2px -2px 0px 0px #D8292F,
+              -2px 2px 0px 0px #D8292F;
 } */
 .orbeon .xforms-form .xbl-component .input-prepend > :not(.add-on) {
   border-left: 0px !important;
@@ -368,11 +420,15 @@
   border-radius: 0px !important;
 }
 
-/* .orbeon .xforms-form .xbl-component .input-prepend.input-append .add-on:last-child {
-  border-right: 1px solid #606060 !important;
-} */
-
-/* .orbeon .input-prepend.input-append .add-on:first-child, .orbeon .input-prepend.input-append .btn:first-child */
+/* Date and time input add-on button */
+.orbeon .xbl-fr-grid .fr-grid .input-append.date span.add-on {
+  background-color: #E6E6E6 !important;
+  padding: 0px 0px;
+}
+.orbeon .xbl-fr-grid .fr-grid .input-append.date span.add-on i {
+  margin-top: 13px;
+  text-shadow: none !important;
+}
 
 /* Help icon (FontAwesome circled "i", changed to circled "?") */
 .orbeon .xbl-fr-grid .fr-grid .xforms-help:not(:empty)::before {
@@ -442,10 +498,10 @@
 .orbeon .xforms-alert.xforms-active {
   background: none !important;
   border: none !important;
-  color: #D8292F !important;
+  color: #D8292F;
   font-weight: 700 !important;
   margin-top: 0px !important;
-  padding: 2px 0px !important;
+  padding: 4px 0px 2px 0px !important;
 }
 .orbeon .xforms-alert.xforms-active::before {
   border: 0px !important;
@@ -464,7 +520,7 @@
 .orbeon .xbl-fr-error-summary .fr-level-error > .fr-error-title {
   background: none !important;
   border-bottom: 0px !important;
-  color: #D8292F !important;
+  color: #D8292F;
   font-size: 16px !important;
   font-weight: 700 !important;
 }
@@ -477,17 +533,17 @@
 /* Error list item */
 .orbeon .xbl-fr-error-summary .fr-error-group > li {
   border: 0px !important;
-  color: #D8292F !important;
+  color: #D8292F;
   padding: 5px 10px !important;
 }
 .orbeon .xbl-fr-error-summary .fr-error-group .fr-level-error .fr-error-label,
 .orbeon .xbl-fr-error-summary .fr-error-group .fr-level-error .fr-error-alert {
-  color: #D8292F !important;
+  color: #D8292F;
 }
 
 /* Text input field with error */
 .orbeon .xbl-fr-grid .fr-grid .xforms-group.xforms-invalid input[type="text"] {
-  /* border-color: #D8292F !important; */
+  border-color: #D8292F !important;
   box-shadow: 0 0 0 2px #D8292F;
 }
 
@@ -523,6 +579,11 @@
 }
 .orbeon .nav-list > .active > span > a, .orbeon .nav-list > .active > span > a:hover {
 	background-color: #355992;
+}
+
+/* Wizard left navigation with field in error  */
+.orbeon .xbl-fr-wizard .fr-wizard-toc .nav .active.visible-invalid > span > a {
+  background-color: #D8292F;
 }
 
 /* Wizard left navigation pagination links */
