@@ -572,7 +572,7 @@
   margin: 0 0 30px 0 !important;
 }
 
-/* File upload */
+/* File upload, image upload */
 .orbeon .xforms-upload-info {
   background-image: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJwYXBlcmNsaXAiIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1wYXBlcmNsaXAgZmEtdy0xNCIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjNjA2MDYwIiBkPSJNNDMuMjQ2IDQ2Ni4xNDJjLTU4LjQzLTYwLjI4OS01Ny4zNDEtMTU3LjUxMSAxLjM4Ni0yMTcuNTgxTDI1NC4zOTIgMzRjNDQuMzE2LTQ1LjMzMiAxMTYuMzUxLTQ1LjMzNiAxNjAuNjcxIDAgNDMuODkgNDQuODk0IDQzLjk0MyAxMTcuMzI5IDAgMTYyLjI3NkwyMzIuMjE0IDM4My4xMjhjLTI5Ljg1NSAzMC41MzctNzguNjMzIDMwLjExMS0xMDcuOTgyLS45OTgtMjguMjc1LTI5Ljk3LTI3LjM2OC03Ny40NzMgMS40NTItMTA2Ljk1M2wxNDMuNzQzLTE0Ni44MzVjNi4xODItNi4zMTQgMTYuMzEyLTYuNDIyIDIyLjYyNi0uMjQxbDIyLjg2MSAyMi4zNzljNi4zMTUgNi4xODIgNi40MjIgMTYuMzEyLjI0MSAyMi42MjZMMTcxLjQyNyAzMTkuOTI3Yy00LjkzMiA1LjA0NS01LjIzNiAxMy40MjgtLjY0OCAxOC4yOTIgNC4zNzIgNC42MzQgMTEuMjQ1IDQuNzExIDE1LjY4OC4xNjVsMTgyLjg0OS0xODYuODUxYzE5LjYxMy0yMC4wNjIgMTkuNjEzLTUyLjcyNS0uMDExLTcyLjc5OC0xOS4xODktMTkuNjI3LTQ5Ljk1Ny0xOS42MzctNjkuMTU0IDBMOTAuMzkgMjkzLjI5NWMtMzQuNzYzIDM1LjU2LTM1LjI5OSA5My4xMi0xLjE5MSAxMjguMzEzIDM0LjAxIDM1LjA5MyA4OC45ODUgMzUuMTM3IDEyMy4wNTguMjg2bDE3Mi4wNi0xNzUuOTk5YzYuMTc3LTYuMzE5IDE2LjMwNy02LjQzMyAyMi42MjYtLjI1NmwyMi44NzcgMjIuMzY0YzYuMzE5IDYuMTc3IDYuNDM0IDE2LjMwNy4yNTYgMjIuNjI2bC0xNzIuMDYgMTc1Ljk5OGMtNTkuNTc2IDYwLjkzOC0xNTUuOTQzIDYwLjIxNi0yMTQuNzctLjQ4NXoiPjwvcGF0aD48L3N2Zz4K") !important;
   background-size: 16px !important;
@@ -598,6 +598,18 @@
   margin-left: 8px !important;
   padding-left: 20px !important;
   width: 20px! important;
+}
+
+/* Handwritten control */
+.orbeon .xbl-fr-handwritten-signature canvas {
+  border: 1px solid #606060 !important;
+}
+.orbeon .xbl-fr-handwritten-signature .fr-handwritten-signature-clear {
+  right: 8px !important;
+  bottom: 11px !important;
+}
+.orbeon .xbl-fr-handwritten-signature .fr-handwritten-signature-clear a {
+  color: #313132 !important;
 }
 
 /* Wizard left navigation panel */
