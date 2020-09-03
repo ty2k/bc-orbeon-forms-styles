@@ -24,16 +24,27 @@
   text-decoration: none;
 }
 
-/* Primary buttons in text (non-form buttons that have made their way into content) */
-.orbeon .btn-primary {
-  background-color: #003366;
-  border-color: #003366;
-  color: white;
+/* Button control (BC Secondary Button) */
+.orbeon button.btn {
+  background-color: white !important;
+  border-color: #003366 !important;
+  color: #003366 !important;
 }
-
-.orbeon .btn-primary:hover {
-  opacity: 0.8;
-  text-decoration: underline;
+.orbeon button.btn:hover {
+  background-color: #003366 !important;
+  border-color: #003366 !important;
+  color: white !important;
+  opacity: 0.8 !important;
+  text-decoration: underline !important;
+}
+.orbeon button.btn:focus {
+  background-color: #003366 !important;
+  border-color: #003366 !important;
+  box-shadow: 0 0 0 3px #3B99FC !important;
+  color: white !important;
+  opacity: 0.8 !important;
+  outline: none !important;
+  text-decoration: underline !important;
 }
 
 /* Section titles */
@@ -181,10 +192,8 @@
   border: 2px solid #606060;
   border-radius: 50%;
   content: '';
-  /* display: inline-block; */
   height: 20px;
   left: 0px;
-  /* margin: 0 5px 0 0; */
   position: absolute;
   top: 0px;
   width: 20px;
@@ -221,7 +230,7 @@
 
 /* Select dropdown */
 .orbeon .xbl-fr-grid .fr-grid select {
-  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBkPSJNMjA3LjAyOSAzODEuNDc2TDEyLjY4NiAxODcuMTMyYy05LjM3My05LjM3My05LjM3My0yNC41NjkgMC0zMy45NDFsMjIuNjY3LTIyLjY2N2M5LjM1Ny05LjM1NyAyNC41MjItOS4zNzUgMzMuOTAxLS4wNEwyMjQgMjg0LjUwNWwxNTQuNzQ1LTE1NC4wMjFjOS4zNzktOS4zMzUgMjQuNTQ0LTkuMzE3IDMzLjkwMS4wNGwyMi42NjcgMjIuNjY3YzkuMzczIDkuMzczIDkuMzczIDI0LjU2OSAwIDMzLjk0MUwyNDAuOTcxIDM4MS40NzZjLTkuMzczIDkuMzcyLTI0LjU2OSA5LjM3Mi0zMy45NDIgMHoiLz48L3N2Zz4=');
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjMzEzMTMyIiBkPSJNMjA3LjAyOSAzODEuNDc2TDEyLjY4NiAxODcuMTMyYy05LjM3My05LjM3My05LjM3My0yNC41NjkgMC0zMy45NDFsMjIuNjY3LTIyLjY2N2M5LjM1Ny05LjM1NyAyNC41MjItOS4zNzUgMzMuOTAxLS4wNEwyMjQgMjg0LjUwNWwxNTQuNzQ1LTE1NC4wMjFjOS4zNzktOS4zMzUgMjQuNTQ0LTkuMzE3IDMzLjkwMS4wNGwyMi42NjcgMjIuNjY3YzkuMzczIDkuMzczIDkuMzczIDI0LjU2OSAwIDMzLjk0MUwyNDAuOTcxIDM4MS40NzZjLTkuMzczIDkuMzcyLTI0LjU2OSA5LjM3Mi0zMy45NDIgMHoiLz48L3N2Zz4K") no-repeat !important;
   background-color: white !important;
   background-position: right 10px center !important;
   background-repeat: no-repeat !important;
@@ -246,10 +255,49 @@
   outline: none !important;
 }
 
-/* Static select dropdown (not a real select control) */
-/* .orbeon .xforms-control .forms-select1.xforms-incremental.xforms-select1-appearance-minimal {
-
-} */
+/* Static select dropdown  */
+.orbeon .select2 span.selection {
+  border: 1px solid #606060 !important;
+  border-radius: 4px !important;
+  display: block !important;
+  height: 44px !important;
+}
+.orbeon .select2 span.selection:focus-within {
+  border: 1px solid #3B99FC !important;
+  box-shadow: 0 0 0 2px #3B99FC !important;
+}
+.orbeon .select2 span.selection span.select2-selection {
+  border: 0 !important;
+  height: 42px !important;
+}
+.orbeon .select2 span.selection span.select2-selection:focus {
+  outline: 0px !important;
+}
+.orbeon .select2 span.selection span.select2-selection .select2-container--default,
+.orbeon .select2 span.selection span.select2-selection .select2-selection--single,
+.orbeon .select2 span.selection span.select2-selection .select2-selection__rendered {
+  color: #313132 !important;
+  line-height: 44px !important;
+}
+/* "x" to clear selection in field */
+.orbeon .select2 span.selection span.select2-selection .select2-selection__rendered span.select2-selection__clear {
+  background: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJ0aW1lcyIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLXRpbWVzIGZhLXctMTEiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzUyIDUxMiI+PHBhdGggZmlsbD0iIzMxMzEzMiIgZD0iTTI0Mi43MiAyNTZsMTAwLjA3LTEwMC4wN2MxMi4yOC0xMi4yOCAxMi4yOC0zMi4xOSAwLTQ0LjQ4bC0yMi4yNC0yMi4yNGMtMTIuMjgtMTIuMjgtMzIuMTktMTIuMjgtNDQuNDggMEwxNzYgMTg5LjI4IDc1LjkzIDg5LjIxYy0xMi4yOC0xMi4yOC0zMi4xOS0xMi4yOC00NC40OCAwTDkuMjEgMTExLjQ1Yy0xMi4yOCAxMi4yOC0xMi4yOCAzMi4xOSAwIDQ0LjQ4TDEwOS4yOCAyNTYgOS4yMSAzNTYuMDdjLTEyLjI4IDEyLjI4LTEyLjI4IDMyLjE5IDAgNDQuNDhsMjIuMjQgMjIuMjRjMTIuMjggMTIuMjggMzIuMiAxMi4yOCA0NC40OCAwTDE3NiAzMjIuNzJsMTAwLjA3IDEwMC4wN2MxMi4yOCAxMi4yOCAzMi4yIDEyLjI4IDQ0LjQ4IDBsMjIuMjQtMjIuMjRjMTIuMjgtMTIuMjggMTIuMjgtMzIuMTkgMC00NC40OEwyNDIuNzIgMjU2eiI+PC9wYXRoPjwvc3ZnPgo=") no-repeat !important;
+  height: 22px !important;
+  margin: 10px 30px 10px 10px !important;
+  overflow: hidden !important;
+  text-indent: 100% !important;
+  white-space: nowrap !important;
+  width: 22px !important;
+}
+/* Selection arrow  */
+.orbeon .select2-selection__arrow {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjMzEzMTMyIiBkPSJNMjA3LjAyOSAzODEuNDc2TDEyLjY4NiAxODcuMTMyYy05LjM3My05LjM3My05LjM3My0yNC41NjkgMC0zMy45NDFsMjIuNjY3LTIyLjY2N2M5LjM1Ny05LjM1NyAyNC41MjItOS4zNzUgMzMuOTAxLS4wNEwyMjQgMjg0LjUwNWwxNTQuNzQ1LTE1NC4wMjFjOS4zNzktOS4zMzUgMjQuNTQ0LTkuMzE3IDMzLjkwMS4wNGwyMi42NjcgMjIuNjY3YzkuMzczIDkuMzczIDkuMzczIDI0LjU2OSAwIDMzLjk0MUwyNDAuOTcxIDM4MS40NzZjLTkuMzczIDkuMzcyLTI0LjU2OSA5LjM3Mi0zMy45NDIgMHoiLz48L3N2Zz4K") no-repeat !important;
+  height: 20px !important;
+  margin: 11px 12px !important;
+}
+.orbeon .select2-selection__arrow b {
+  display: none !important;
+}
 
 /* Dropdown menu (left control in grid) */
 .orbeon .dropdown.fr-grid-dropdown-menu.open ul.dropdown-menu li {
@@ -390,13 +438,6 @@
   border-color: #606060;
   border-right: 0px !important;
 }
-/* Add-on prepend with error in field - box shadow on top, left, bottom */
-/* TODO: Try to duplicate the full border for focus and error styles */
-/* .orbeon .input-prepend .add-on.xforms-group.xforms-invalid {
-  border-color: #D8292F !important;
-  box-shadow: -2px -2px 0px 0px #D8292F,
-              -2px 2px 0px 0px #D8292F;
-} */
 .orbeon .xforms-form .xbl-component .input-prepend > :not(.add-on) {
   border-left: 0px !important;
   border-top-left-radius: 0px 0px !important;
@@ -435,12 +476,23 @@
 /* Date and time input add-on button */
 .orbeon .xbl-fr-grid .fr-grid .input-append.date span.add-on {
   background-color: #E6E6E6 !important;
+  border-bottom-left-radius: 4px;
+  border-left: 1px solid #606060 !important;
+  border-top-left-radius: 4px;
+  margin-left: 4px;
+  padding: 0px 0px;
+}
+.orbeon .xbl-fr-grid .fr-grid .input-append.date input:focus + span.add-on {
+  background-color: #B8B8B8 !important;
   padding: 0px 0px;
 }
 .orbeon .xbl-fr-grid .fr-grid .input-append.date span.add-on i {
   margin-top: 13px;
   text-shadow: none !important;
 }
+/* .orbeon .xforms-type-date .date span.add-on {
+
+} */
 
 /* Help icon (FontAwesome circled "i", changed to circled "?") */
 .orbeon .xbl-fr-grid .fr-grid .xforms-help:not(:empty)::before {
@@ -658,71 +710,84 @@
 
 /* Wizard left leftnavigation pagination count span */
 .orbeon .pagination ul > li > span.fr-page-number {
-  border: 2px solid white;
+  border: 2px solid white !important;
 }
 
-/* Wizard left navigation pagination link - right arrow button enabled (BC Secondary Button) */
-.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal {
-  background-color: white;
-  border: 2px solid #003366;
-}
-.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover {
-  background-color: #003366;
-  color: white;
-  opacity: 0.8;
-}
-.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal a i.fa.fa-fw.fa-chevron-right::before {
-  color: #003366;
-}
-.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover a i.fa.fa-fw.fa-chevron-right::before {
-  color: white;
-}
-
-/* Wizard left navigation pagination link - right arrow button disabled (BC Disabled Primary Button) */
-.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly {
-  cursor: not-allowed;
-  opacity: 0.3;
-}
-.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a {
-  cursor: not-allowed;
-}
-.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a i.fa.fa-fw.fa-chevron-right::before {
-  color: #003366;
-  cursor: not-allowed;
-}
-.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a i.fa.fa-fw.fa-chevron-right {
-  opacity: 1;
-}
-
-/* Wizard left navigation pagination link - left arrow button enabled (BC Secondary Button) */
+/* Wizard left navigation pagination link - left/prev and right/next arrow button enabled (BC Secondary Button) */
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal,
 .orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal {
-  background-color: white;
-  border: 2px solid #003366;
+  background-color: white !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: #003366 !important;
 }
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover,
 .orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover {
-  background-color: #003366;
-  color: white;
-  opacity: 0.8;
+  background-color: #003366 !important;
+  color: white !important;
+  opacity: 0.8 !important;
 }
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:focus-within,
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:focus-within {
+  background-color: #003366 !important;
+  border-color: #3B99FC !important;
+  box-shadow: 0 0 0 1px #3B99FC !important;
+  color: white !important;
+  opacity: 0.8 !important;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal a:focus,
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal a:focus  {
+  outline: none !important;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal a i.fa.fa-fw.fa-chevron-right::before,
 .orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal a i.fa.fa-fw.fa-chevron-left::before {
-  color: #003366;
+  color: #003366 !important;
 }
-.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover a i.fa.fa-fw.fa-chevron-left::before {
-  color: white;
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:focus-within a i.fa.fa-fw.fa-chevron-right::before,
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:focus-within a i.fa.fa-fw.fa-chevron-left::before  {
+  color: white !important;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover a i.fa.fa-fw.fa-chevron-right::before,
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal:hover a i.fa.fa-fw.fa-chevron-left::before  {
+  color: white !important;
 }
 
-/* Wizard left navigation pagination link - left arrow button disabled (BC Disabled Secondary Button) */
+/* Wizard left navigation pagination link - right/next arrow button disabled (BC Disabled Primary Button) */
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly,
 .orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly {
-  background-color: white;
-  cursor: not-allowed;
-  opacity: 0.3;
+  cursor: not-allowed !important;
+  opacity: 0.3 !important;
 }
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly:focus-within,
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly:focus-within {
+  background-color: white !important;
+  opacity: 0.3 !important;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly:hover {
+  background-color: white !important;
+  opacity: 0.3 !important;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly:hover a i.fa.fa-fw.fa-chevron-right::before {
+  color: #003366 !important;
+  cursor: not-allowed !important;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a,
 .orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a {
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a:focus,
+.orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a:focus {
+  outline: none !important;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a i.fa.fa-fw.fa-chevron-right::before,
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a:focus i.fa.fa-fw.fa-chevron-right::before {
+  color: #003366 !important;
+  cursor: not-allowed !important;
+}
+.orbeon .pagination ul > li:last-child > span.fr-wizard-next.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly:focus-within a i.fa.fa-fw.fa-chevron-right::before,
 .orbeon .pagination ul > li:first-child > span.fr-wizard-prev.xforms-control.xforms-trigger.xforms-trigger-appearance-minimal.xforms-readonly a i.fa.fa-fw.fa-chevron-left::before {
-  color: #003366;
-  cursor: not-allowed;
+  color: #003366 !important;
+  cursor: not-allowed !important;
 }
 
 /* Bottom navigation - all buttons */
@@ -737,157 +802,187 @@
     margin-left: 0;
   }
 }
-span.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+.orbeon span.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
   background-image: none !important;
-  border: 2px solid;
+  border-color: #003366 !important;
+  border-style: solid !important;
+  border-width: 2px !important;
   box-shadow: none !important;
   font-family: 'BC Sans', 'Noto Sans', Verdana, Arial, sans-serif !important;
   font-size: 16px !important;
-  font-weight: 700;
+  font-weight: 700 !important;
   padding: 10px 30px !important;
   text-shadow: none !important;
 }
-span.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
-  text-decoration: underline;
+.orbeon span.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:focus {
+  border-color: #3B99FC !important;
+  box-shadow: 0 0 0 1px #3B99FC !important;
 }
-span.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button:hover {
+.orbeon span.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
+  text-decoration: underline !important;
+}
+.orbeon span.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button:hover {
   cursor: not-allowed !important;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Bottom navigation - Next button enabled (BC Primary Button) */
-span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
-  background-color: #003366;
-  border-color: #003366;
-  color: white;
+.orbeon span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: #003366 !important;
+  border-color: #003366 !important;
+  color: white !important;
 }
-span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
-  opacity: 0.8;
+.orbeon span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:focus {
+  border-color: #3B99FC !important;
+  box-shadow: 0 0 0 1px #3B99FC !important;
 }
-span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
-  color: white;
+.orbeon span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
+  opacity: 0.8 !important;
+}
+.orbeon span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: white !important;
 }
 
 /* Bottom navigation - Next button disabled (BC Disabled Primary Button) */
-span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
+.orbeon span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
   background-color: #003366;
   border-color: #003366;
   color: white;
   cursor: not-allowed;
   opacity: 0.3;
 }
-span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button i {
+.orbeon span.fr-wizard-next-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button i {
   color: white;
   opacity: 1;
 }
 
 /* Bottom navigation - Previous button enabled (BC Secondary Button) */
-span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
-  background-color: white;
-  border-color: #003366;
-  color: #003366;
+.orbeon span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: white !important;
+  border-color: #003366 !important;
+  color: #003366 !important;
 }
-span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
-  background-color: #003366;
-  border-color: #003366;
-  color: white;
-  opacity: 0.8;
+.orbeon span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:focus {
+  border-color: #3B99FC !important;
+  box-shadow: 0 0 0 1px #3B99FC !important;
 }
-span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
-  color: #003366;
+.orbeon span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover {
+  background-color: #003366 !important;
+  border-color: #003366 !important;
+  color: white !important;
+  opacity: 0.8 !important;
 }
-span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover i {
-  color: white;
+.orbeon span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: #003366 !important;
+}
+.orbeon span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button:hover i {
+  color: white !important;
 }
 
 /* Bottom navigation - Previous button disabled (BC Disabled Secondary Button) */
-span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
-  background-color: white;
-  border-color: #003366;
-  color: #003366;
-  cursor: not-allowed;
-  opacity: 0.3;
+.orbeon span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button {
+  background-color: white !important;
+  border-color: #003366 !important;
+  color: #003366 !important;
+  cursor: not-allowed !important;
+  opacity: 0.3 !important;
 }
-span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button i {
-  color: #003366;
+.orbeon span.fr-wizard-prev-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full.xforms-readonly button i {
+  color: #003366 !important;
 }
 
 /* Bottom navigation - Clear button (BC Secondary Button) */
-span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
-  background-color: white;
-  border-color: #003366;
-  color: #003366;
+.orbeon span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: white !important;
+  border-color: #003366 !important;
+  color: #003366 !important;
 }
-span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
-  background-color: #003366;
-  border-color: #003366;
-  color: white;
-  opacity: 0.8
+.orbeon span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:focus button {
+  border-color: #3B99FC !important;
+  box-shadow: 0 0 0 1px #3B99FC !important;
 }
-span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
-  color: #003366;
+.orbeon span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
+  background-color: #003366 !important;
+  border-color: #003366 !important;
+  color: white !important;
+  opacity: 0.8 !important;
 }
-span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
-  color: white;
+.orbeon span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: #003366 !important;
+}
+.orbeon span.fr-clear-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
+  color: white !important;
 }
 
 /* Bottom navigation - Save PDF button (BC Secondary Button) */
-span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
-  background-color: white;
-  border-color: #003366;
-  color: #003366;
+.orbeon span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: white !important;
+  border-color: #003366 !important;
+  color: #003366 !important;
 }
-span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
-  background-color: #003366;
-  color: white;
-  opacity: 0.8
+.orbeon span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:focus button {
+  border-color: #3B99FC !important;
+  box-shadow: 0 0 0 1px #3B99FC !important;
 }
-span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
-  color: #003366;
+.orbeon span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
+  background-color: #003366 !important;
+  color: white !important;
+  opacity: 0.8 !important;
 }
-span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
-  color: white;
+.orbeon span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: #003366 !important;
+}
+.orbeon span.fr-pdf-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
+  color: white !important;
 }
 
 /* Bottom navigation - Refresh button (BC Secondary Button) */
-span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
-  background-color: white;
-  border-color: #003366;
-  color: #003366;
+.orbeon span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: white !important;
+  border-color: #003366 !important;
+  color: #003366 !important;
 }
 @media (max-width: 640px) {
-  span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
-    width: 100%;
+  .orbeon span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+    width: 100% !important;
   }
 }
-span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
-  background-color: #003366;
-  color: white;
-  opacity: 0.8;
+.orbeon span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:focus button {
+  border-color: #3B99FC !important;
+  box-shadow: 0 0 0 1px #3B99FC !important;
 }
-span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
-  color: #003366;
-  left: -10px;
-  position: relative;
+.orbeon span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
+  background-color: #003366 !important;
+  color: white !important;
+  opacity: 0.8 !important;
+}
+.orbeon span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+  color: #003366 !important;
+  left: -10px !important;
+  position: relative !important;
 }
 @media (max-width: 640px) {
-  span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
-    left: 0px;
+  .orbeon span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button i {
+    left: 0px !important;
   }
 }
-span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
-  color: white;
+.orbeon span.fr-refresh-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
+  color: white !important;
 }
 
 /* Bottom navigation - Submit/Email button (BC Primary Button) */
-span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
-  background-color: #003366;
-  border-color: #003366;
-  color: white;
+.orbeon span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full button {
+  background-color: #003366 !important;
+  border-color: #003366 !important;
+  color: white !important;
 }
-span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
-  opacity: 0.8;
+.orbeon span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:focus button {
+  border-color: #3B99FC !important;
+  box-shadow: 0 0 0 1px #3B99FC !important;
 }
-span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
-  color: white;
+.orbeon span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button {
+  opacity: 0.8 !important;
+}
+.orbeon span.fr-email-button.xforms-control.xforms-trigger.xforms-trigger-appearance-full:hover button i {
+  color: white !important;
 }
