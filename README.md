@@ -1,6 +1,6 @@
 # BC Gov styles for Orbeon Forms
 
-This repository holds CSS to add [BC Gov Design System styles](https://github.com/bcgov/design-system) to Orbeon Forms within CMS Lite.
+This repository holds CSS to add [BC Gov Design System styles](https://github.com/bcgov/design-system) to Orbeon Forms.
 
 To style your form, within your XML source (Advanced tab -> Edit Source), paste CSS (from `./src/styles.css`) into a `<xh:style>` tag as shown below:
 
@@ -14,49 +14,15 @@ To style your form, within your XML source (Advanced tab -> Edit Source), paste 
 ...
 ```
 
-Orbeon publishes [CSS in Orbeon Forms documentation](https://doc.orbeon.com/form-runner/styling/css).
+## Style Guide
+See Adobe XD style guide: https://xd.adobe.com/view/76b59a97-3acc-44ef-bdb7-0c4660f85b3a-23e6/
 
+A copy of the XD file and PNG art boards are included in the `./style-guide/` directory.
 
-## Todo
+## Notes
+- Orbeon publishes [CSS in Orbeon Forms documentation](https://doc.orbeon.com/form-runner/styling/css).
+- These styles were written in the context of having to over-write both the compiled Orbeon styles and the gov.bc.ca front-end rendering application styles (hence the `!important` use).
 
-- [ ] Hint text style
-- [ ] "?" hint icon to the right of field labels
-- [ ] Text input field focus style
-- [ ] Text input field error and error message style
-- [ ] Text input character counter style
-- [ ] Text input and plain text area additional info bubble style
-- [ ] Plain text area field style
-- [ ] Plain text area field focus style
-- [ ] Plain text area field error style
-- [ ] Formatted text area field style
-- [ ] Text field with suffix icon style
-- [ ] Text field with suffix label style
-- [ ] Text field with prefix icon style
-- [ ] Text field with prefix label style
-- [ ] Dropdown menu style
-- [ ] Radio button style
-- [ ] Yes/No control style
-- [ ] Checkbox style
-- [ ] Date input style
-- [ ] Date input calendar button style/function
-- [ ] Time input text field style
-- [ ] Time input clock button style/function
-- [ ] Single file attachment style
-- [ ] Single file attachment uploading message style/function
-- [ ] Multiple file attachment style
-- [ ] Handwritten signature control style
-- [ ] Image attachment control style
-- [ ] Image annotation control style/function
-- [ ] Primary button style
-- [ ] Secondary button style
-- [ ] Unstyled button style
-- [ ] Add-on prefix and suffix button style
-- [ ] Error message list style/function
-- [ ] Wizard style navigation with stacked, pill-style buttons
-- [ ] Text style for buttons
-- [ ] Text style for wizard text
-- [ ] Text style for control labels
-- [ ] Text style for emphasized text
-- [ ] Text style for body text, explanatory text, text input, lists, menus, other primary text
-- [ ] Text style for control error messages
-- [ ] Text style for hint text and secondary text
+## Contact
+- Designer: [Kim Nguyen](mailto:Kimberly.Nguyen@gov.bc.ca)
+- Developer: [Tyler Krys](mailto:Tyler.Krys@gov.bc.ca)
